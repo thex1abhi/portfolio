@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { toast } from "react-toastify";
 
-/* ================= PROJECT DATA ================= */
+
 const projects = [
   {
     title: "Event Management App",
@@ -18,7 +18,7 @@ const projects = [
     tech: "React, Node.js, MongoDB",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/event-management-app",
-    live: "https://your-live-demo-link.com",
+  
   },
   {
     title: "Portfolio Website",
@@ -26,7 +26,7 @@ const projects = [
     tech: "React, TailwindCSS",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/portfolio",
-    live: "https://your-portfolio-live.com",
+   
   },
   {
     title: "DSA Practice Platform",
@@ -35,15 +35,15 @@ const projects = [
     tech: "JavaScript, Algorithms",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/dsa-platform",
-    live: "https://your-dsa-live.com",
+   
   },
 ];
 
-/* ================= APP ================= */
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  /* ============ EMAIL HANDLER ============ */
+ 
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -68,13 +68,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
 
-      {/* ================= NAVBAR ================= */}
+      
       <nav className="fixed w-full top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-300 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-indigo-500">
           Abhishek.dev
         </h1>
 
-        {/* Desktop */}
+       
         <div className="hidden md:flex gap-6 text-sm">
           <a href="#about" className="hover:text-indigo-400">About</a>
           <a href="#skills" className="hover:text-indigo-400">Skills</a>
@@ -82,7 +82,7 @@ export default function App() {
           <a href="#contact" className="hover:text-indigo-400">Contact</a>
         </div>
 
-        {/* Mobile */}
+      
         <button
           className="md:hidden text-xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -136,13 +136,13 @@ export default function App() {
             href="/resume.pdf"
             className="px-6 py-3 border border-gray-400 dark:border-gray-700 rounded-lg"
           >
-            Download Resume
+             <span className=":hidden" > Download  </span>  Resume
           </a>
         </div>
       </section>
 
-      {/* ================= ABOUT ================= */}
-      <section id="about" className="px-8 py-20 max-w-5xl mx-auto">
+    
+      <section id="about" className="px-8  py-20 sm:py-7 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           I work with React, Node.js, Express, and MongoDB to build
@@ -151,7 +151,6 @@ export default function App() {
         </p>
       </section>
 
-      {/* ================= SKILLS ================= */}
       <section id="skills" className="px-8 py-20 bg-gray-200 dark:bg-gray-900">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-3xl font-bold mb-10">Skills</h3>
@@ -178,7 +177,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ================= PROJECTS ================= */}
+     
       <section id="projects" className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-10">Projects</h3>
@@ -216,14 +215,7 @@ export default function App() {
                     >
                       <FaGithub /> GitHub
                     </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 hover:text-indigo-400"
-                    >
-                      <FaExternalLinkAlt /> Live
-                    </a>
+                    
                   </div>
                 </div>
               </motion.div>
@@ -232,7 +224,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ================= CONTACT ================= */}
+    
       <section id="contact" className="px-8 py-20 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">Contact</h3>
 
@@ -270,7 +262,7 @@ export default function App() {
         </form>
       </section>
 
-      {/* ================= FOOTER ================= */}
+    
       <footer className="border-t border-gray-300 dark:border-gray-800 py-6 text-center text-sm text-gray-500">
         © 2026 Abhishek Yadav. All rights reserved.
       </footer>
