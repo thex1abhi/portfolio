@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
-import {
-  FaGithub,
-  FaBars,
-  FaTimes,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import emailjs from "emailjs-com"; 
+import dotenv from "dotenv";
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
-
+ 
 
 const projects = [
   {
