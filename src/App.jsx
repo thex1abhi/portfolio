@@ -15,10 +15,10 @@ const projects = [
     title: "Event Management App",
     description:
       "Full-stack MERN app with authentication and role-based access.",
-    tech: "React, Node.js, MongoDB",
+    tech: "React, Node.js, MongoDB, Express.js, Cloudinary, Razorpay",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/event-management-app",
-  
+
   },
   {
     title: "Portfolio Website",
@@ -26,7 +26,7 @@ const projects = [
     tech: "React, TailwindCSS",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/portfolio",
-   
+
   },
   {
     title: "DSA Practice Platform",
@@ -35,7 +35,7 @@ const projects = [
     tech: "JavaScript, Algorithms",
     image: "https://via.placeholder.com/400x250",
     github: "https://github.com/yourusername/dsa-platform",
-   
+
   },
 ];
 
@@ -43,16 +43,16 @@ const projects = [
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
- 
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
         e.target,
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
       )
       .then(
         () => {
@@ -68,13 +68,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
 
-      
+
       <nav className="fixed w-full top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-300 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-indigo-500">
           Abhishek.dev
         </h1>
 
-       
+
         <div className="hidden md:flex gap-6 text-sm">
           <a href="#about" className="hover:text-indigo-400">About</a>
           <a href="#skills" className="hover:text-indigo-400">Skills</a>
@@ -82,7 +82,7 @@ export default function App() {
           <a href="#contact" className="hover:text-indigo-400">Contact</a>
         </div>
 
-      
+
         <button
           className="md:hidden text-xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -106,7 +106,7 @@ export default function App() {
         )}
       </nav>
 
-      {/* ================= HERO ================= */}
+
       <section className="pt-32 pb-24 text-center px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -136,13 +136,13 @@ export default function App() {
             href="/resume.pdf"
             className="px-6 py-3 border border-gray-400 dark:border-gray-700 rounded-lg"
           >
-             <span className=":hidden" > Download  </span>  Resume
+            <span className=":hidden" > Download  </span>  Resume
           </a>
         </div>
       </section>
 
-    
-      <section id="about" className="px-8  py-20 sm:py-7 max-w-5xl mx-auto">
+
+      <section id="about" className="px-8 scroll-mt-28  py-20 sm:py-7 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           I work with React, Node.js, Express, and MongoDB to build
@@ -151,24 +151,28 @@ export default function App() {
         </p>
       </section>
 
-      <section id="skills" className="px-8 py-20 bg-gray-200 dark:bg-gray-900">
+      <section id="skills" className="px-8   py-20 ">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-3xl font-bold mb-10">Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "React",
+              "Html",
+              "CSS",
               "JavaScript",
+              "React.js",
               "Node.js",
               "Express.js",
               "MongoDB",
               "TailwindCSS",
-              "Git",
-              "DSA",
+              "Postman",
+              "Render",
+              "Vercel",
+              "Framer Motion"
             ].map((skill) => (
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 key={skill}
-                className="bg-white dark:bg-gray-950 border border-gray-300 dark:border-gray-800 rounded-lg py-4 text-center font-medium"
+                className="bg-white  text-black border border-gray-300  rounded-3xl py-3  text-center font-medium"
               >
                 {skill}
               </motion.div>
@@ -177,7 +181,7 @@ export default function App() {
         </div>
       </section>
 
-     
+
       <section id="projects" className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-10">Projects</h3>
@@ -202,7 +206,7 @@ export default function App() {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                     {project.description}
                   </p>
-                  <p className="text-xs text-indigo-500 mb-4">
+                  <p className="text-xs  text-indigo-500 mb-4">
                     {project.tech}
                   </p>
 
@@ -215,7 +219,7 @@ export default function App() {
                     >
                       <FaGithub /> GitHub
                     </a>
-                    
+
                   </div>
                 </div>
               </motion.div>
@@ -224,7 +228,7 @@ export default function App() {
         </div>
       </section>
 
-    
+
       <section id="contact" className="px-8 py-20 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">Contact</h3>
 
@@ -262,7 +266,7 @@ export default function App() {
         </form>
       </section>
 
-    
+
       <footer className="border-t border-gray-300 dark:border-gray-800 py-6 text-center text-sm text-gray-500">
         © 2026 Abhishek Yadav. All rights reserved.
       </footer>
