@@ -1,39 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com"; 
-import dotenv from "dotenv";
+import emailjs from "emailjs-com";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
- 
+import projects from "./projects";
 
-const projects = [
-  {
-    title: "Event Management App",
-    description:
-      "Full-stack MERN app with authentication and role-based access.",
-    tech: "React, Node.js, MongoDB, Express.js, Cloudinary, Razorpay",
-    image: "https://via.placeholder.com/400x250",
-    github: "https://github.com/yourusername/event-management-app",
-
-  },
-  {
-    title: "Portfolio Website",
-    description: "Modern animated portfolio using React and TailwindCSS.",
-    tech: "React, TailwindCSS",
-    image: "https://via.placeholder.com/400x250",
-    github: "https://github.com/yourusername/portfolio",
-
-  },
-  {
-    title: "DSA Practice Platform",
-    description:
-      "Problem-solving focused app with categorized questions.",
-    tech: "JavaScript, Algorithms",
-    image: "https://via.placeholder.com/400x250",
-    github: "https://github.com/yourusername/dsa-platform",
-
-  },
-];
 
 
 export default function App() {
@@ -52,11 +23,11 @@ export default function App() {
       )
       .then(
         () => {
-          toast.success("Message sent successfully 🚀");
+          toast.success("Message sent successfully ");
           e.target.reset();
         },
         () => {
-          toast.error("Failed to send message ❌");
+          toast.error("Failed to send message ");
         }
       );
   };
@@ -117,8 +88,7 @@ export default function App() {
           animate={{ opacity: 1 }}
           className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 mb-8"
         >
-          MERN Stack Developer building scalable applications and
-          solving real-world problems.
+          Full‑Stack MERN Developer building modern, scalable web applications.
         </motion.p>
 
         <div className="flex justify-center gap-4">
@@ -126,13 +96,13 @@ export default function App() {
             href="#projects"
             className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg"
           >
-            View Projects
+            View My Work
           </a>
           <a
             href="/resume.pdf"
             className="px-6 py-3 border border-gray-400 dark:border-gray-700 rounded-lg"
           >
-            <span className=":hidden" > Download  </span>  Resume
+             Download Resume
           </a>
         </div>
       </section>
@@ -141,10 +111,16 @@ export default function App() {
       <section id="about" className="px-8 scroll-mt-28  py-20 sm:py-7 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-          I work with React, Node.js, Express, and MongoDB to build
-          scalable full-stack applications. I focus on clean UI,
-          performance, and strong problem-solving fundamentals.
-        </p>
+  I’m a BCA 3rd-year student and a passionate MERN Stack developer focused on
+  building scalable, real-world web applications. I work extensively with
+  React, Node.js, Express, and MongoDB to create clean, responsive, and
+  user-friendly interfaces .
+  <br /><br />
+  I have hands-on experience deploying applications using Vercel and Render,
+  managing APIs with Postman, and integrating modern tools like Cloudinary and
+  payment gateways like Razorpay . I enjoy solving problems, learning new technologies, and
+  continuously improving my development skills .
+</p>
       </section>
 
       <section id="skills" className="px-8   py-20 ">
