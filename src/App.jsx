@@ -33,20 +33,20 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-gray-100 text-black ">
 
 
-      <nav className="fixed w-full top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-300 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-indigo-500">
+      <nav className="fixed w-full top-0 z-50 bg-gray-100  border-b border-slate-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-bold text-teal-500">
           Abhishek.dev
         </h1>
 
 
         <div className="hidden md:flex gap-6 text-sm">
-          <a href="#about" className="hover:text-indigo-400">About</a>
-          <a href="#skills" className="hover:text-indigo-400">Skills</a>
-          <a href="#projects" className="hover:text-indigo-400">Projects</a>
-          <a href="#contact" className="hover:text-indigo-400">Contact</a>
+          <a href="#about" className="hover:text-teal-400">About</a>
+          <a href="#skills" className="hover:text-teal-400">Skills</a>
+          <a href="#projects" className="hover:text-teal-400">Projects</a>
+          <a href="#contact" className="hover:text-teal-400">Contact</a>
         </div>
 
 
@@ -58,7 +58,7 @@ export default function App() {
         </button>
 
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white dark:bg-gray-950 border-b border-gray-300 dark:border-gray-800 flex flex-col items-center gap-6 py-6 md:hidden">
+          <div className="absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-gray-800 flex flex-col items-center gap-6 py-6 md:hidden">
             {["about", "skills", "projects", "contact"].map((item) => (
               <a
                 key={item}
@@ -80,13 +80,13 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-extrabold mb-4"
         >
-          Hi, I'm <span className="text-indigo-500">Abhishek</span>
+          Hi, I'm <span className="text-teal-500">Abhishek</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 mb-8"
+          className="max-w-xl mx-auto text-black  mb-8"
         >
           Full‑Stack MERN Developer building modern, scalable web applications.
         </motion.p>
@@ -94,13 +94,13 @@ export default function App() {
         <div className="flex justify-center gap-4">
           <a
             href="#projects"
-            className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg"
+            className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-black rounded-lg"
           >
             View My Work
           </a>
           <a
             href="/Resume.pdf"
-            className="px-6 py-3 border border-gray-400 dark:border-gray-700 rounded-lg"
+            className="px-6 py-3 border border-slate-400 dark:border-slate-700 rounded-lg text-black"
           >
             Download Resume
           </a>
@@ -110,7 +110,7 @@ export default function App() {
 
       <section id="about" className="px-8 scroll-mt-28  py-20 sm:py-7 max-w-5xl mx-auto">
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-black  leading-relaxed">
           I’m a BCA 2rd-year student and a passionate MERN Stack developer focused on
           building scalable, real-world web applications. I work extensively with
           React, Node.js, Express, and MongoDB to create clean, responsive, and
@@ -123,7 +123,7 @@ export default function App() {
         </p>
       </section>
 
-      <section id="skills" className="px-8   py-20 ">
+      <section id="skills" className="px-8 py-20  text-black">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-3xl font-bold mb-10">Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -144,7 +144,7 @@ export default function App() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 key={skill}
-                className="bg-white  text-black border border-gray-300  rounded-3xl py-3  text-center font-medium"
+                className="bg-black text-white border border-gray-700 rounded-3xl py-3 text-center font-medium"
               >
                 {skill}
               </motion.div>
@@ -163,7 +163,7 @@ export default function App() {
               <motion.div
                 key={i}
                 whileHover={{ y: -6 }}
-                className="bg-white dark:bg-gray-950 border border-gray-300 dark:border-gray-800 rounded-xl overflow-hidden"
+                className="bg-gray-300 border border-slate-200  rounded-xl overflow-hidden"
               >
                 <img
                   src={project.image}
@@ -175,10 +175,10 @@ export default function App() {
                   <h4 className="text-lg font-semibold mb-2">
                     {project.title}
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  <p className="text-sm text-black  mb-3">
                     {project.description}
                   </p>
-                  <p className="text-xs  text-indigo-500 mb-4">
+                  <p className="text-xs  text-teal-900 mb-4">
                     {project.tech}
                   </p>
 
@@ -187,7 +187,7 @@ export default function App() {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 hover:text-indigo-400"
+                      className="flex items-center gap-2 "
                     >
                       <FaGithub /> GitHub
                     </a>
@@ -213,25 +213,25 @@ export default function App() {
             name="name"
             placeholder="Your Name"
             required
-            className="px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border"
+            className="px-4 py-3 rounded-lg bg-black text-white border border-slate-200  "
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            className="px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border"
+            className="px-4 py-3 rounded-lg bg-black border border-slate-200 text-white dark:text-gray-100"
           />
           <textarea
             name="message"
             rows="5"
             placeholder="Your Message"
             required
-            className="px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border"
+            className="px-4 py-3 rounded-lg bg-black  border border-slate-200 text-white dark:text-gray-100"
           />
           <button
             type="submit"
-            className="bg-indigo-500 hover:bg-indigo-600 text-white py-3 rounded-lg"
+            className="bg-teal-500 hover:bg-teal-600 text-black py-3 rounded-lg"
           >
             Send Message
           </button>
@@ -239,8 +239,8 @@ export default function App() {
       </section>
 
 
-      <footer className="border-t border-gray-300 dark:border-gray-800 py-6 text-center text-sm text-gray-500">
-        © 2026 Abhishek Yadav. All rights reserved.
+      <footer className="border-t border-slate-200 0 py-6 text-center text-sm text-black">
+        © 2026 Abhishek Yadav. All rights reserved
       </footer>
     </div>
   );
