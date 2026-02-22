@@ -1,5 +1,6 @@
 "use client";
 import About from "@/components/About";
+import { Contact } from "@/components/Contact";
 import Header from "@/components/Header";
 import Mywork from "@/components/Mywork";
 import Navbar from "@/components/Navbar";
@@ -12,7 +13,8 @@ export default function Home() {
     <Header /> 
     <About />
     <Skills /> 
-    <Mywork />
+    <Mywork /> 
+    <Contact />
     </>
   );
 }

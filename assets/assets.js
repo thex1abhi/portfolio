@@ -102,18 +102,22 @@ export const workData = [
     {
         title: 'ImageCue ',
         description: 'Imagecue is a powerful text-to-image generator that transforms words into stunning visuals.',
-        bgImage: '/work-1.png',
+        bgImage: '/work-3.png',
+        github:"https://github.com/thex1abhi/ImageCue"
     },
     {
         title: 'EventEase',
         description: 'EventEase is a smart event management system designed to simplify planning, organizing, and executing events.',
         bgImage: '/work-2.png',
+        github:"https://github.com/thex1abhi/EventEase"
     },
     {
         title: 'CourseHub',
         description: 'CourseHub is an E-commerce course selling website made using MERN Stack.',
-        bgImage: '/work-3.png',
+        bgImage: '/work-1.png', 
+        github:"https://github.com/thex1abhi/CourseHub"
     },
+    
     
 ]
 
