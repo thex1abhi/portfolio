@@ -4,30 +4,11 @@ import { skills } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-// const skills = [
-//   "HTML5",
-//   "CSS3",
-//   "JavaScript",
-//   "TypeScript",
-//   "Next.js",
-//   "React",
-//   "Node.js",
-//   "Express.js",
-//   "MongoDB",
-//   "SQL",
-//   "Render",
-//   "Vercel",
-//   "Postman",
-//   "Framer Motion",
-//   "shadcn/ui",
-  
-// ];
-
 const Skills = () => {
   return (
-    <section className="w-full py-16 px-4 md:px-10">
+    <section id="skills" className="w-full py-16 px-4 md:px-10">
       <div className="max-w-6xl mx-auto text-center">
-        {/* Heading */}
+      
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Skills
         </h2>
@@ -35,7 +16,7 @@ const Skills = () => {
           Technologies and tools I use to build modern full-stack applications
         </p>
 
-        {/* Skills Buttons */}
+   
         <div className="flex flex-wrap  items-center justify-center gap-3 md:gap-4">
           {skills.map(({title ,icon },index) => ( 
             

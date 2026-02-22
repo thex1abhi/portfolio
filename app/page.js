@@ -1,6 +1,7 @@
 "use client";
 import About from "@/components/About";
 import Header from "@/components/Header";
+import Mywork from "@/components/Mywork";
 import Navbar from "@/components/Navbar";
 import Skills from "@/components/Skills";
 
@@ -10,7 +11,8 @@ export default function Home() {
     <Navbar />
     <Header /> 
     <About />
-    <Skills />
+    <Skills /> 
+    <Mywork />
     </>
   );
 }

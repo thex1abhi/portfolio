@@ -44,6 +44,16 @@ import JavaScript from "./javascript.png"
 import Typescript from "./Typescript.png" 
 import React from "./react.png" 
 import next from "./nextjs.png"  
+import tailwindcss from "./tailwindcss.png"
+import render from "./render.png"
+import razorpay from "./razorpay.png"
+import shadcn from "./shadcn.png" 
+import node from "./nodejs.png"
+import mysql from "./mysql.png"
+import vercel from "./vercel.png" 
+import framermotion from "./framermotion.png"
+ import express from "./express-js.png" 
+ import cloudinary from "./cloudinary.png"
 
 
 export const assets = {
@@ -90,33 +100,23 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'ImageCue ',
+        description: 'Imagecue is a powerful text-to-image generator that transforms words into stunning visuals.',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'EventEase',
+        description: 'EventEase is a smart event management system designed to simplify planning, organizing, and executing events.',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'CourseHub',
+        description: 'CourseHub is an E-commerce course selling website made using MERN Stack.',
         bgImage: '/work-3.png',
     },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
+    
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, TypeScript, JavaScript, React, Next Js' },
@@ -135,16 +135,16 @@ export const skills = [
     { title: 'TypeScript', icon:Typescript },
     { title: 'React.js', icon: React },
     { title: 'Next.js', icon: next },
-    { title: 'TailwindCss', icon: css },
-    { title: 'Node.js', icon: css },
-    { title: 'Express.js', icon: css },
-    { title: 'MongoDB', icon: css },
-    { title: 'MySQL', icon: css },
-    { title: 'Render', icon: css },
-    { title: 'Vercel', icon: css },
-    { title: 'shadcn/ui', icon: css },
-    { title: 'Framer motion', icon: css },
-    { title: 'Cloudinary', icon: css },
-    { title: 'Razorpay', icon: css },
+    { title: 'TailwindCss', icon: tailwindcss },
+    { title: 'Node.js', icon: node },
+    { title: 'Express.js', icon: express },
+    { title: 'MongoDB', icon: mongodb},
+    { title: 'MySQL', icon: mysql },
+    { title: 'Render', icon: render },
+    { title: 'Vercel', icon: vercel },
+    { title: 'shadcn/ui', icon: shadcn },
+    { title: 'Framer motion', icon: framermotion },
+    { title: 'Cloudinary', icon: cloudinary },
+    { title: 'Razorpay', icon: razorpay },
 
 ]
