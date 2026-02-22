@@ -35,6 +35,16 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import github from "./github.png"
+import postman from "./postman.png"
+import html from "./html.png"
+import css from "./css.png" 
+ 
+import JavaScript from "./javascript.png" 
+import Typescript from "./Typescript.png" 
+import React from "./react.png" 
+import next from "./nextjs.png"  
+
 
 export const assets = {
     user_image,
@@ -46,6 +56,8 @@ export const assets = {
     project_icon_dark,
     vscode,
     firebase,
+    postman,
+    github,
     figma,
     git,
     mongodb,
@@ -113,5 +125,26 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
-]; 
+    assets.vscode, assets.postman, assets.git, assets.github, assets.figma,
+];
+
+export const skills = [
+    { title: 'HTML5', icon: html },
+    { title: 'CSS3', icon: css },
+    { title: 'JavaScript', icon: JavaScript },
+    { title: 'TypeScript', icon:Typescript },
+    { title: 'React.js', icon: React },
+    { title: 'Next.js', icon: next },
+    { title: 'TailwindCss', icon: css },
+    { title: 'Node.js', icon: css },
+    { title: 'Express.js', icon: css },
+    { title: 'MongoDB', icon: css },
+    { title: 'MySQL', icon: css },
+    { title: 'Render', icon: css },
+    { title: 'Vercel', icon: css },
+    { title: 'shadcn/ui', icon: css },
+    { title: 'Framer motion', icon: css },
+    { title: 'Cloudinary', icon: css },
+    { title: 'Razorpay', icon: css },
+
+]

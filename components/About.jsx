@@ -15,7 +15,7 @@ const About = () => {
 
                     <div className="flex-1" >
                         <p className="mb-10 max-w-2xl " > Motivated Full-Stack Developer and BCA undergraduate skilled in TypeScript, Next.js, React, Node.js, Express, MongoDB, and MySQL. Experienced in developing production-ready web applications with secure authentication, API integration, and scalable backend architecture.
-                            Actively seeking a software development internship to apply technical skills and contribute to real-world, scalable web solutions.
+                           
 
                         </p>
                         <ul  className=" grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"  >
@@ -27,14 +27,15 @@ const About = () => {
                                  </li>
                                
                             ))} </ul> 
-                            {/* <h4 className="my-6 text-gray-700 " > Tools I use </h4>
+                            <h4 className="my-6 text-gray-700 " > Tools I use </h4>
                             <ul className="flex items-center gap-3 sm:gap-5 " > 
                                 {toolsData.map((tool,index)=>( 
-                                <li key={index} > 
+                                <li  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lgcursor-pointer hover:translate-y-1 duration-500   "
+                                 key={index} > 
                                 <Image src={tool} alt="tool" className="w-5 sm:w-7 " />  
                                  </li>
                                 )) }
-                            </ul> */}
+                            </ul>
                     </div>
                 </div>
             </div>

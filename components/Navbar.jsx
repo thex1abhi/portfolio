@@ -36,10 +36,11 @@ window.addEventListener('scroll',()=>{
                 <a href="#top">
                     <Image src={assets.logo} className="w-28 cursor-pointer mr-14" alt="Logo" />
                 </a>
-                <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50  " >
+                <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  
+                    ${isScroll ? "  ":" bg-white shadow-sm bg-opacity-50 "} `  } >
                     <li> <a href="#top"> Home  </a> </li>
                     <li> <a href="#about "> About me  </a> </li>
-                    <li> <a href="#services"> Services </a> </li>
+                    <li> <a href="#skills"> Skills </a> </li>
                     <li> <a href="#projects"> Projects  </a> </li>
                     <li> <a href="#contact"> Contact me  </a> </li>
                 </ul> 
@@ -58,7 +59,7 @@ window.addEventListener('scroll',()=>{
                 <div  onClick={closeMenu} className="absolute right-6 top-6 " > <Image  src={assets.close_black} alt="cross-icon " className="w-5 cursor-pointer " /> </div>
                  <li> <a href="#top"  onClick={closeMenu} > Home  </a> </li>
                     <li> <a href="#about " onClick={closeMenu} > About me  </a> </li>
-                    <li> <a href="#services" onClick={closeMenu} > Services </a> </li>
+                    <li> <a href="#skills" onClick={closeMenu} > Skills  </a> </li>
                     <li> <a href="#projects" onClick={closeMenu} > Projects  </a> </li>
                     <li> <a href="#contact" onClick={closeMenu} > Contact me  </a> </li>
             </ul>
