@@ -13,7 +13,7 @@ const Skills = () => {
           Skills
         </h2>
         <p className="text-gray-600 mb-10 text-sm md:text-base">
-          Technologies and tools I use to build modern full-stack applications
+          Technologies and tools I use to build and deploy modern full-stack applications
         </p>
 
    
