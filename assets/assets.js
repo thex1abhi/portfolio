@@ -39,7 +39,7 @@ import github from "./github.png"
 import postman from "./postman.png"
 import html from "./html.png"
 import css from "./css.png" 
- 
+ import motion from "./motion.png"
 import JavaScript from "./javascript.png" 
 import Typescript from "./Typescript.png" 
 import React from "./react.png" 
@@ -147,7 +147,7 @@ export const skills = [
     { title: 'Render', icon: render },
     { title: 'Vercel', icon: vercel },
     { title: 'shadcn/ui', icon: shadcn },
-    { title: 'Framer motion', icon: framermotion },
+    { title: 'Motion', icon: motion },
     { title: 'Cloudinary', icon: cloudinary },
     { title: 'Razorpay', icon: razorpay },
 

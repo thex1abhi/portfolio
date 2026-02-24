@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "motion/react"
 import { skills } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
@@ -9,18 +9,30 @@ const Skills = () => {
     <section id="skills" className="w-full py-16 px-4 md:px-10 scroll-mt-20 ">
       <div className="max-w-6xl mx-auto text-center">
       
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <motion.h2 
+        initial={{scale:0}}
+        whileInView={{scale:1}} 
+        transition={{duration:0.5}}
+        className="text-3xl md:text-4xl font-bold mb-4">
           Skills
-        </h2>
-        <p className="text-gray-600 mb-10 text-sm md:text-base">
+        </motion.h2>
+        <motion.p 
+         initial={{scale:0}}
+        whileInView={{scale:1}} 
+        transition={{duration:0.8 }}
+        className="text-gray-600 mb-10 text-sm md:text-base">
           Technologies and tools I use to build and deploy modern full-stack applications
-        </p>
+        </motion.p>
 
    
         <div className="flex flex-wrap  items-center justify-center gap-3 md:gap-4">
           {skills.map(({title ,icon },index) => ( 
             
-            <button
+            <motion.button 
+
+             initial={{scale:0.8}}
+        whileInView={{scale:1}} 
+        transition={{duration:0.1}}
               key={index}
               className="
                 flex items-center gap-2
@@ -37,7 +49,7 @@ const Skills = () => {
             >
               <Image src={icon} alt="skills-icon" className="w-5 h-5" />
               {title}
-            </button> 
+            </motion.button> 
             
           ))}
         </div>

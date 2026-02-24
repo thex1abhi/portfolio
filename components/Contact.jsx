@@ -1,7 +1,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import { motion } from "motion/react"
 export const Contact = () => { 
 
   const [result, setResult] = useState("");
@@ -31,36 +31,74 @@ export const Contact = () => {
 
   return (
     <>
-      <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-size-90% "   >
-        <h2 className="text-center text-4xl  ">
+      <motion.div 
+             initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+      id="contact" className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-size-90% "   >
+        <motion.h2 
+               initial={{y:-20, opacity: 0 }}
+                whileInView={{ y:0,opacity: 1 }}
+                transition={{ duration: 0.5 ,delay:0.2 }}
+        className="text-center text-4xl  ">
           Get in Touch
-        </h2>
-        <p className=" text-center max-w-2xl mx-auto mt-5 mb-12 ">
+        </motion.h2>
+        <motion.p 
+               initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 ,delay:0.3 }}
+        className=" text-center max-w-2xl mx-auto mt-5 mb-12 ">
           I’d love to hear from you! If you have any questions, comments,or feedback,please use the form below.
-        </p>
-        <form onSubmit={onSubmit} className="max-w-2xl mx-auto" >
+        </motion.p>
+        <motion.form  
+         
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5,delay:0.1}}
+
+        onSubmit={onSubmit} className="max-w-2xl mx-auto" >
           <div className="  grid  grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8 " >
-            <input type="text" placeholder="Enter your name" required
+            <motion.input 
+                   initial={{ x:-50, opacity: 0 }}
+                whileInView={{ x:0, opacity: 1 }}
+                transition={{ duration: 0.6,delay:0.2 }} 
+            type="text" placeholder="Enter your name" required
               className="flex-1 p-3 outline-none border-[0.5px] border-gray-400  
               rounded-md bg-white" name="name"
             />
-            <input type="email" placeholder="Enter your email" required
+            <motion.input 
+               initial={{ x:50, opacity: 0 }}
+                whileInView={{ x:0, opacity: 1 }}
+                transition={{ duration: 0.6,delay:0.2 }} 
+            type="email" placeholder="Enter your email" required
               className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md 
-               bg-white" name="email"
+               bg-white" name="email" 
             />
           </div>
-          <textarea rows={6} placeholder="Enter your message" required  name="message" 
+          <motion.textarea 
+          
+             initial={{ y:100, opacity: 0 }}
+                whileInView={{ y:0, opacity: 1 }} 
+                transition={{ duration: 0.6,delay:0.2}} 
+          
+          rows={6} placeholder="Enter your message" required  name="message" 
           className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 "
           >
-          </textarea>
-          <button type="submit" 
+          </motion.textarea>
+          <motion.button 
+          
+          whileHover={{scale:1.05}}
+          transition={{duration:0.3}}
+          type="submit" 
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer "
           > Send Message <Image  src={assets.right_arrow_white} alt="" 
           className="w-4"
-          /> </button>  
-          <p className="mt-4" > {result} </p> 
-        </form>
-      </div>
+          /> </motion.button>  
+          <p 
+          
+          className="mt-4" > {result} </p> 
+        </motion.form>
+      </motion.div>
     </>
   )
 };
