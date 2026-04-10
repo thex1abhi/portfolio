@@ -98,28 +98,6 @@ export const assets = {
     right_arrow_bold_dark
 };
 
-export const workData = [
-    {
-        title: 'ImageCue ',
-        description: 'Imagecue is a powerful text-to-image generator that transforms words into stunning visuals.',
-        bgImage: '/work-3.png',
-        github:"https://github.com/thex1abhi/ImageCue"
-    },
-    {
-        title: 'EventEase',
-        description: 'EventEase is a smart event management system designed to simplify planning, organizing, and executing events.',
-        bgImage: '/work-2.png',
-        github:"https://github.com/thex1abhi/EventEase"
-    },
-    {
-        title: 'CourseHub',
-        description: 'CourseHub is an E-commerce course selling website made using MERN Stack.',
-        bgImage: '/work-1.png', 
-        github:"https://github.com/thex1abhi/CourseHub"
-    },
-    
-    
-]
 
 
 export const infoList = [
@@ -148,7 +126,6 @@ export const skills = [
     { title: 'Vercel', icon: vercel },
     { title: 'shadcn/ui', icon: shadcn },
     { title: 'Motion', icon: motion },
-    { title: 'Cloudinary', icon: cloudinary },
-    { title: 'Razorpay', icon: razorpay },
+   
 
 ]
