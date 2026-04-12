@@ -12,7 +12,14 @@ export const workData = [
     description: 'FileArc stores and organizes files for teams and individuals, built with Next.js, Clerk, Convex, and TypeScript.',
     bgImage: '/work-5.jpg',
     github: 'https://github.com/thex1abhi/FileArc',
-    liveLink: "Deployment Pending",
+    liveLink: "https://file-arc.vercel.app/",
+  }, 
+  {
+    title: 'ImageCue',
+    description: 'ImageCue is a text-to-image generator  built using MERN stack  that transforms words into stunning visuals.',
+    bgImage: '/work-3.png',
+    github: 'https://github.com/thex1abhi/ImageCue',
+    liveLink: 'https://image-cue.vercel.app/',
   },
   {
     title: 'RoyalWoods',
@@ -21,13 +28,7 @@ export const workData = [
     github: 'https://github.com/thex1abhi/RoyalWoods',
     liveLink: 'Deployment Pending',
   },
-  {
-    title: 'ImageCue',
-    description: 'ImageCue is a text-to-image generator  built using MERN stack  that transforms words into stunning visuals.',
-    bgImage: '/work-3.png',
-    github: 'https://github.com/thex1abhi/ImageCue',
-    liveLink: 'https://image-cue.vercel.app/',
-  },
+  
   {
     title: 'EventEase',
     description: 'A smart event management system designed to simplify planning and executing events.',
