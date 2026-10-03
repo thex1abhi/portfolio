@@ -1,6 +1,21 @@
 export const workData = [
-
-    {
+  
+   {
+    title: 'Multiagent AI platform',
+    description: 'A microservices-based platform where users chat with specialized AI agents  for chat, coding, images, search, PDFs etc',
+    bgImage: '/syntrix.jpg',
+    github: 'https://github.com/thex1abhi/syntrix',
+    liveLink: 'Deployment Pending',
+  },
+  {
+    title: 'Lumina UI',
+    description: 'A full-stack web application that generates reusable React JSX components with real-time code preview using React Live.',
+    bgImage: '/lumina.jpg',
+    github: 'https://github.com/thex1abhi/Lumina-ui',
+    liveLink: 'https://luminaui.onrender.com/',
+  },
+ 
+  {
     title: 'ChatBot',
     description: 'An intelligent AI chatbot built using Next.js, TypeScript, MongoDB, ScaleKit, and Gemini AI.',
     bgImage: '/work-6.png',
@@ -13,7 +28,7 @@ export const workData = [
     bgImage: '/work-5.jpg',
     github: 'https://github.com/thex1abhi/FileArc',
     liveLink: "https://file-arc.vercel.app/",
-  }, 
+  },
   {
     title: 'ImageCue',
     description: 'ImageCue is a text-to-image generator  built using MERN stack  that transforms words into stunning visuals.',
@@ -28,7 +43,7 @@ export const workData = [
     github: 'https://github.com/thex1abhi/RoyalWoods',
     liveLink: 'Deployment Pending',
   },
-  
+
   {
     title: 'EventEase',
     description: 'A smart event management system designed to simplify planning and executing events.',

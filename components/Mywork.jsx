@@ -1,3 +1,5 @@
+"use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,7 +7,9 @@ import React from "react";
 import { motion } from "motion/react";
 import { workData } from "@/assets/projectdata";
 
-const Mywork = () => {
+const Mywork = ({ showAll = false }) => {
+  const projects = showAll ? workData : workData.slice(0, 3);
+
   return (
     <motion.section
       id="projects"
@@ -39,9 +43,9 @@ const Mywork = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {workData.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
-              key={index}
+              key={project.title}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3 }}
               className="group overflow-hidden rounded-[28px] border border-slate-200/80 bg-black shadow-lg shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
@@ -92,6 +96,17 @@ const Mywork = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {!showAll && (
+          <div className="mt-10 text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold transition hover:bg-slate-100"
+            >
+              View all projects
+            </Link>
+          </div>
+        )}
       </motion.div>
     </motion.section>
   );
